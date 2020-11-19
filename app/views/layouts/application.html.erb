@@ -12,7 +12,7 @@
   <body>
     <%= link_to "Home page", root_path %>
     <% if user_signed_in? %>
-       <p>Hi!, <%= link_to current_user.email, users_show_path %></p>
+       <p>Hi!, <%= link_to current_user.name, users_show_path %></p>
        <%= link_to "log out", destroy_user_session_path, method: :delete %>
      <% else %>
        <%= link_to "sign in", new_user_session_path %>
