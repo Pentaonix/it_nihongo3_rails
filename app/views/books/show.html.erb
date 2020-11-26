@@ -42,6 +42,14 @@
     <% end %>
     </ul>
 
+<h2>Categories List</h2>
+    <ul>
+       <% @book.categories.each do |category|%>
+        <li><%= category.name %>
+        </li>
+    <% end %>
+    </ul>
+
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
